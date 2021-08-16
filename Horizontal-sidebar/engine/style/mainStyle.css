@@ -1,0 +1,121 @@
+html,
+body,
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  background-color: #252629;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar-container {
+  width: 350px;
+  height: 50px;
+  background-color: #131417;
+  border-radius: 5px;
+  padding: 5px;
+  padding-right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.sidebar-container .sidebar-item {
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+.sidebar-container .sidebar-item:hover .sidebar-item-title {
+  opacity: 1;
+  color: #0162f3;
+}
+
+.sidebar-container .sidebar-item:hover .sidebar-item-icon {
+  top: 3px;
+}
+
+.sidebar-container .sidebar-item:hover .sidebar-item-icon svg {
+  stroke: #0162f3;
+}
+
+.sidebar-item-icon {
+  position: relative;
+  top: 10px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.sidebar-item-icon svg {
+  stroke: #fff;
+}
+
+.sidebar-item-title {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  font-size: .8rem;
+}
+
+@media screen and (max-width: 380px) {
+  .sidebar-container {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .sidebar-container {
+    width: 60px;
+    height: 230px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .sidebar-container .sidebar-item {
+    right: 3px !important;
+  }
+}
+/*# sourceMappingURL=mainStyle.css.map */
